@@ -1,0 +1,100 @@
+/* ==========================================================================
+   PROJETOS
+   Filtro por categoria. Os cards e os botões do filtro são gerados pelo
+   JavaScript.
+   ========================================================================== */
+
+/* ----- Filtro ----- */
+
+.filtro-projetos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.rotulo-filtro {
+  font-weight: bold;
+}
+
+.botao-filtro {
+  padding: 8px 16px;
+  background-color: transparent;
+  color: var(--cor-primaria-hover);
+  border: 2px solid var(--cor-primaria);
+  border-radius: 999px;
+  font-family: var(--fonte-titulo);
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.botao-filtro:hover {
+  background-color: var(--cor-suave);
+}
+
+/* Estado selecionado: cor + marca de verificação */
+.botao-filtro[aria-pressed="true"] {
+  background-color: var(--cor-primaria);
+  color: white;
+}
+
+.botao-filtro[aria-pressed="true"]::before {
+  content: "\2713  ";
+}
+
+/* Contagem de projetos mostrados */
+#status {
+  min-height: 1.6em;
+  font-weight: bold;
+}
+
+
+/* ----- Cards ----- */
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: var(--cor-suave);
+  box-shadow: var(--sombra-suave);
+  border: 2px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 22px;
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--cor-titulo);
+}
+
+.tecnologias {
+  font-size: 14px;
+  color: var(--cor-texto);
+  margin-top: 10px;
+}
+
+
+/* ----- Aviso quando o filtro não encontra nada ----- */
+
+.sem-resultados {
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px dashed var(--cor-borda);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.sem-resultados p {
+  margin: 0;
+}

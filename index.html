@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Gabriel de Almeida Andrade</title>
+  <meta name="description" content="Portfólio de Gabriel de Almeida Andrade, estudante de Engenharia de Software. Conhecimentos, projetos e contato para estágio em desenvolvimento Front-End, Back-End ou Full-Stack.">
+  <meta name="theme-color" content="#134E4A">
+  <link rel="icon" type="image/svg+xml" href="_imagens/favicon.svg">
+
+  <!-- Prévia do link 
+       Troque SEU-ENDERECO pelo endereço onde o site for publicado: o og:image precisa de URL completa. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Gabriel Andrade | Portfólio">
+  <meta property="og:description" content="Estudante de Engenharia de Software em busca de estágio em desenvolvimento. Veja meus conhecimentos e projetos.">
+  <meta property="og:image" content="https://SEU-ENDERECO/_imagens/og-imagem.png">
+  <meta property="og:image:alt" content="Gabriel de Almeida Andrade, estudante de Engenharia de Software">
+
+  <!-- Fontes e logos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="_css/base.css">
+  <link rel="stylesheet" href="_css/botoes.css">
+  <link rel="stylesheet" href="_css/cabecalho.css">
+  <link rel="stylesheet" href="_css/conteudo.css">
+  <link rel="stylesheet" href="_css/conhecimentos.css">
+  <link rel="stylesheet" href="_css/projetos.css">
+  <link rel="stylesheet" href="_css/formulario.css">
+  <link rel="stylesheet" href="_css/tema-escuro.css">
+  <link rel="stylesheet" href="_css/responsivo.css">
+</head>
+<body class="escuro">
+
+  <!-- CABEÇALHO -->
+  <header id="topo" class="cabecalho" tabindex="-1">
+    <button id="tema" class="botao-tema" type="button" aria-pressed="true" aria-label="Modo escuro" title="Modo escuro">
+      <svg class="icone-lua" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+      <svg class="icone-sol" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="5"/>
+        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+      </svg>
+    </button>
+
+    <div class="perfil-topo">
+      <button type="button" id="abrir-foto" class="botao-foto" aria-label="Ampliar foto" aria-haspopup="dialog">
+        <img class="foto-perfil" src="_imagens/gabriel-foto.jpg" alt="Foto de Gabriel de Almeida Andrade" width="150" height="150">
+      </button>
+      <div>
+        <h1>Gabriel Andrade</h1>
+        <p class="subtitulo">Estudante de Engenharia de Software | Desenvolvimento Front-End &amp; Back-End</p>
+      </div>
+    </div>
+
+    <!-- Menu de navegação -->
+    <nav class="menu">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#conhecimentos">Conhecimentos</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="conteudo-principal">
+
+    <!-- Sobre mim -->
+    <section id="sobre" class="secao">
+      <h2>Sobre mim</h2>
+      <div class="destaque-visual">
+        <p><strong>Foco profissional:</strong> Desenvolvimento de software completo — unindo interfaces acessíveis e responsivas no front-end a lógicas bem estruturadas no back-end.</p>
+      </div>
+      <p>
+        Sou estudante de Engenharia de Software na Universidade Católica do Salvador (UCSal) e busco oportunidade de estágio em desenvolvimento. Na prática, combino a construção de páginas semânticas, responsivas e interativas (HTML, CSS e JavaScript) com o desenvolvimento de regras de negócio e modelagem orientada a objetos em Java.
+      </p>
+      <p id="sobre-extra" hidden>
+        Tenho interesse em arquitetura de código limpo, usabilidade e acessibilidade (IHC), buscando sempre evoluir na integração entre interface e servidor para entregar aplicações fáceis de usar e de manter em equipe.
+      </p>
+      <button id="btn-mostrar-mais" class="botao" type="button" aria-expanded="false" aria-controls="sobre-extra">Mostrar mais</button>
+    </section>
+
+    <!-- Conhecimentos -->
+    <section id="conhecimentos" class="secao">
+      <h2>Conhecimentos</h2>
+      <p>Áreas em que atuo e as tecnologias que uso nos meus projetos:</p>
+
+      <h3 id="titulo-areas" class="grupo-habilidades">Áreas de atuação</h3>
+      <ul class="areas" aria-labelledby="titulo-areas">
+        <li class="area">
+          <span class="area-icone">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </span>
+          <h4 class="area-titulo">Front-end</h4>
+          <p class="area-descricao">Construo interfaces responsivas, acessíveis e fáceis de usar, do layout ao código.</p>
+          <ul class="area-tecnologias" aria-label="Tecnologias de Front-end">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Bootstrap</li>
+          </ul>
+        </li>
+
+        <li class="area">
+          <span class="area-icone">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </span>
+          <h4 class="area-titulo">Back-end</h4>
+          <p class="area-descricao">Desenvolvo a lógica por trás das aplicações, com modelagem orientada a objetos e regras de negócio bem organizadas.</p>
+          <ul class="area-tecnologias" aria-label="Tecnologias de Back-end">
+            <li>Java</li>
+            <li>Orientação a objetos</li>
+          </ul>
+        </li>
+
+        <li class="area">
+          <span class="area-icone">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+          </span>
+          <h4 class="area-titulo">Versionamento e publicação</h4>
+          <p class="area-descricao">Organizo o código com histórico de versões e publico os projetos na web.</p>
+          <ul class="area-tecnologias" aria-label="Tecnologias de Versionamento e publicação">
+            <li>Git</li>
+            <li>GitHub</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3 id="titulo-linguagens" class="grupo-habilidades">Linguagens</h3>
+      <ul class="habilidades" aria-labelledby="titulo-linguagens">
+        <li class="habilidade">
+          <span class="habilidade-icone">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="" width="38" height="38" loading="lazy" decoding="async">
+          </span>
+          <div class="habilidade-texto">
+            <strong class="habilidade-nome">HTML5</strong>
+            <p class="habilidade-descricao">Estruturação semântica e acessibilidade web</p>
+          </div>
+          <span class="habilidade-nivel" data-nivel="2">Intermediário</span>
+        </li>
+
+        <li class="habilidade">
+          <span class="habilidade-icone">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="" width="38" height="38" loading="lazy" decoding="async">
+          </span>
+          <div class="habilidade-texto">
+            <strong class="habilidade-nome">CSS3</strong>
+            <p class="habilidade-descricao">Estilização, Box Model e layouts com Flexbox</p>
+          </div>
+          <span class="habilidade-nivel" data-nivel="2">Intermediário</span>
+        </li>
+
+        <li class="habilidade">
+          <span class="habilidade-icone">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="" width="38" height="38" loading="lazy" decoding="async">
+          </span>
+          <div class="habilidade-texto">
+            <strong class="habilidade-nome">JavaScript</strong>
+            <p class="habilidade-descricao">Interatividade, DOM e eventos</p>
+          </div>
+          <span class="habilidade-nivel" data-nivel="2">Intermediário</span>
+        </li>
+
+        <li class="habilidade">
+          <span class="habilidade-icone">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg" alt="" width="38" height="38" loading="lazy" decoding="async">
+          </span>
+          <div class="habilidade-texto">
+            <strong class="habilidade-nome">Java</strong>
+            <p class="habilidade-descricao">Programação orientada a objetos</p>
+          </div>
+          <span class="habilidade-nivel" data-nivel="2">Intermediário</span>
+        </li>
+      </ul>
+
+      <h3 id="titulo-ferramentas" class="grupo-habilidades">Ferramentas e frameworks</h3>
+      <ul class="habilidades" aria-labelledby="titulo-ferramentas">
+        <li class="habilidade">
+          <span class="habilidade-icone">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" width="38" height="38" loading="lazy" decoding="async">
+          </span>
+          <div class="habilidade-texto">
+            <strong class="habilidade-nome">Git</strong>
+            <p class="habilidade-descricao">Controle de versionamento</p>
+          </div>
+          <span class="habilidade-nivel" data-nivel="1">Básico</span>
+        </li>
+
+        <li class="habilidade">
+          <span class="habilidade-icone">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/github/github-original.svg" alt="" width="38" height="38" loading="lazy" decoding="async">
+          </span>
+          <div class="habilidade-texto">
+            <strong class="habilidade-nome">GitHub</strong>
+            <p class="habilidade-descricao">Publicação de páginas e projetos</p>
+          </div>
+          <span class="habilidade-nivel" data-nivel="1">Básico</span>
+        </li>
+
+        <li class="habilidade">
+          <span class="habilidade-icone">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/bootstrap/bootstrap-original.svg" alt="" width="38" height="38" loading="lazy" decoding="async">
+          </span>
+          <div class="habilidade-texto">
+            <strong class="habilidade-nome">Bootstrap</strong>
+            <p class="habilidade-descricao">Layouts responsivos com componentes prontos</p>
+          </div>
+          <span class="habilidade-nivel" data-nivel="1">Básico</span>
+        </li>
+      </ul>
+
+      <p class="chamada-conhecimentos">
+        Disponível para estágio em Desenvolvimento de Software (Front-End, Back-End ou Full-Stack). <a href="#contato">Vamos conversar?</a>
+      </p>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="secao">
+      <h2>Projetos</h2>
+      <p>Projetos acadêmicos e pessoais:</p>
+
+      <!-- Filtro: os botões são gerados pelo JS a partir de projetos.js -->
+      <div class="filtro-projetos" id="filtros" role="group" aria-labelledby="rotulo-filtro">
+        <span id="rotulo-filtro" class="rotulo-filtro">Filtrar por categoria:</span>
+      </div>
+
+      <p id="status" role="status"></p>
+
+      <!-- Os cards são gerados pelo JS a partir de projetos.js -->
+      <div class="cards" id="lista-projetos"></div>
+
+      <div id="sem-resultados" class="sem-resultados" hidden>
+        <p id="msg-sem-resultados"></p>
+        <button type="button" id="btn-ver-todos" class="botao">Mostrar todos os projetos</button>
+      </div>
+
+      <noscript><p>Ative o JavaScript para ver a lista de projetos.</p></noscript>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="secao">
+      <h2>Contato</h2>
+      <p>Envie uma mensagem para oportunidades de estágio, propostas de projetos ou parcerias.</p>
+
+      <form id="formulario-contato" class="formulario-contato" novalidate>
+        <!-- Resumo dos erros (preenchido pelo JS depois de uma tentativa de envio) -->
+        <div id="resumo-erros" class="resumo-erros" hidden>
+          <p id="titulo-resumo-erros"></p>
+          <ul id="lista-resumo-erros"></ul>
+        </div>
+
+        <fieldset id="campos-contato" class="grupo-campos">
+          <legend class="so-leitor-de-tela">Dados do contato</legend>
+
+          <div class="campo">
+            <label for="campo-nome">Nome <span class="obrigatorio">(obrigatório)</span></label>
+            <input type="text" id="campo-nome" name="nome" required minlength="3" maxlength="80" autocomplete="name" aria-describedby="dica-nome erro-nome">
+            <p id="dica-nome" class="dica">De 3 a 80 caracteres. Acentos, espaços, hífen e apóstrofo são aceitos.</p>
+            <p id="erro-nome" class="erro-campo" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="campo-email">E-mail <span class="obrigatorio">(obrigatório)</span></label>
+            <input type="email" id="campo-email" name="email" required autocomplete="email" aria-describedby="dica-email erro-email">
+            <p id="dica-email" class="dica">Usado apenas para responder. Não verificamos se a conta existe.</p>
+            <p id="erro-email" class="erro-campo" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="campo-motivo">Motivo do contato <span class="obrigatorio">(obrigatório)</span></label>
+            <select id="campo-motivo" name="motivo" required aria-describedby="erro-motivo">
+              <option value="" selected>Selecione um motivo</option>
+              <option value="oportunidade">Oportunidade profissional</option>
+              <option value="freelance">Projeto freelance</option>
+              <option value="outro">Outro</option>
+            </select>
+            <p id="erro-motivo" class="erro-campo" hidden></p>
+          </div>
+
+          <!-- Só aparece, vale e é enviado quando o motivo é "Outro" -->
+          <div id="bloco-assunto" class="campo" hidden>
+            <label for="campo-assunto">Assunto adicional <span class="obrigatorio">(obrigatório)</span></label>
+            <input type="text" id="campo-assunto" name="assunto" minlength="5" maxlength="100" disabled aria-describedby="dica-assunto erro-assunto">
+            <p id="dica-assunto" class="dica">De 5 a 100 caracteres.</p>
+            <p id="erro-assunto" class="erro-campo" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="campo-mensagem">Mensagem <span class="obrigatorio">(obrigatório)</span></label>
+            <textarea id="campo-mensagem" name="mensagem" rows="6" required minlength="30" maxlength="1000" aria-describedby="dica-mensagem contador-mensagem erro-mensagem"></textarea>
+            <p id="dica-mensagem" class="dica">De 30 a 1000 caracteres. Espaços no início e no fim não são contados.</p>
+            <p id="contador-mensagem" class="contador" data-situacao="abaixo"></p>
+            <p id="erro-mensagem" class="erro-campo" hidden></p>
+          </div>
+        </fieldset>
+
+        <button type="submit" id="botao-enviar-contato" class="botao botao-enviar">Enviar mensagem</button>
+        <p id="status-contato" class="status-formulario" role="status" tabindex="-1" data-estado="edicao"></p>
+      </form>
+
+      <p class="canal-real">
+        Prefere falar direto? Escreva para <a href="mailto:gabriel.andrade3538@gmail.com">gabriel.andrade3538@gmail.com</a>
+        ou use o LinkedIn e o GitHub listados em Informações Complementares.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- INFORMAÇÕES COMPLEMENTARES -->
+  <aside class="painel-lateral">
+    <h3>Informações Complementares</h3>
+    <p><strong>Status atual:</strong> Estudante de Engenharia de Software, em Salvador - BA.</p>
+    <ul>
+      <li><strong>Disponibilidade:</strong> Estágios em desenvolvimento de software (Front-End, Back-End ou Full-Stack).</li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/gabrielAndrade01" target="_blank" rel="noopener noreferrer">github.com/gabrielAndrade01<span class="so-leitor-de-tela"> (abre em nova aba)</span></a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/gabrielAndradeLI" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/gabrielAndradeLI<span class="so-leitor-de-tela"> (abre em nova aba)</span></a></li>
+    </ul>
+  </aside>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <p>&copy; 2026 Gabriel de Almeida Andrade</p>
+    <p>Feito com HTML, CSS e JavaScript.</p>
+  </footer>
+
+  <!-- FOTO AMPLIADA (a imagem é copiada da foto do cabeçalho pelo JS) -->
+  <dialog id="dialogo-foto" class="dialogo-foto" aria-label="Foto ampliada">
+    <div id="area-foto-ampliada" class="area-foto-ampliada"></div>
+    <button type="button" id="fechar-foto" class="fechar-foto" aria-label="Fechar foto">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M5 5l14 14M19 5L5 19"/>
+      </svg>
+    </button>
+  </dialog>
+
+  <!-- VOLTAR AO TOPO -->
+  <button type="button" id="voltar-ao-topo" class="voltar-ao-topo" data-visivel="false" aria-label="Voltar ao topo" title="Voltar ao topo">
+    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script src="_javascript/projetos.js"></script>
+  <script src="_javascript/interface.js"></script>
+  <script src="_javascript/filtro-projetos.js"></script>
+  <script src="_javascript/contato.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* ==========================================================================
+   BOTÕES
+   Botão padrão (.botao), variante de envio e botão "voltar ao topo".
+   Botões de um componente específico ficam junto dele.
+   ========================================================================== */
+
+.botao {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background-color: var(--cor-primaria);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.botao:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+/* Botão ocupado (enquanto o formulário é enviado) */
+.botao[aria-disabled="true"] {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+/* Variante: enviar o formulário */
+.botao-enviar {
+  background-color: var(--cor-escura);
+}
+
+.botao-enviar:hover {
+  background-color: var(--cor-primaria);
+}
+
+
+/* Botão flutuante "voltar ao topo" */
+.voltar-ao-topo {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  color: white;
+  background-color: var(--cor-primaria);
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: opacity 0.2s, visibility 0.2s, background-color 0.2s;
+}
+
+.voltar-ao-topo:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+/* Escondido enquanto a página está no topo */
+.voltar-ao-topo[data-visivel="false"] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.voltar-ao-topo svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

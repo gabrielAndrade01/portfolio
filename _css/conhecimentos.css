@@ -1,0 +1,194 @@
+/* ==========================================================================
+   CONHECIMENTOS
+   1) Áreas de atuação: cartões com ícone, descrição e tecnologias.
+   2) Habilidades: cartões com o logo de cada tecnologia, nome, descrição e
+      nível.
+   Os logos vêm da biblioteca Devicon, carregados pela CDN jsDelivr.
+   ========================================================================== */
+
+.grupo-habilidades {
+  margin: 24px 0 14px;
+  font-size: 18px;
+  color: var(--cor-titulo);
+}
+
+/* ----- Áreas de atuação ----- */
+
+.areas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background-color: var(--cor-suave);
+  border: 2px solid var(--cor-borda);
+  border-radius: 12px;
+  box-shadow: var(--sombra-suave);
+}
+
+.area-icone {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  color: white;
+  background-color: var(--cor-primaria);
+  border-radius: 12px;
+}
+
+.area-icone svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.area-titulo {
+  margin: 4px 0 0;
+  font-size: 19px;
+  color: var(--cor-titulo);
+}
+
+.area-descricao {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Tecnologias da área */
+.area-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: auto 0 0;
+  padding: 8px 0 0;
+  list-style: none;
+}
+
+.area-tecnologias li {
+  padding: 3px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cor-titulo);
+  background-color: var(--cor-borda);
+  border-radius: 999px;
+}
+
+
+/* ----- Habilidades ----- */
+
+.habilidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.habilidade {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px;
+  background-color: var(--cor-suave);
+  border: 2px solid var(--cor-borda);
+  border-radius: 12px;
+  box-shadow: var(--sombra-suave);
+}
+
+/* "Etiqueta" branca atrás do logo para manter a logo visível */
+.habilidade-icone {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+}
+
+.habilidade-icone img {
+  width: 38px;
+  height: 38px;
+}
+
+.habilidade-texto {
+  min-width: 0;
+}
+
+.habilidade-nome {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-size: 17px;
+  color: var(--cor-titulo);
+}
+
+.habilidade-descricao {
+  margin: 4px 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--cor-texto-suave);
+}
+
+
+/* ----- Nível (data-nivel) ----- */
+
+.habilidade-nivel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto; /* alinha os níveis na base dos cartões da mesma linha */
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cor-titulo);
+}
+
+.habilidade-nivel::before {
+  content: "";
+  width: 44px;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--cor-titulo) calc(var(--nivel) * 33.34%),
+    rgba(100, 116, 139, 0.35) 0
+  );
+}
+
+.habilidade-nivel[data-nivel="1"] {
+  --nivel: 1;
+}
+
+.habilidade-nivel[data-nivel="2"] {
+  --nivel: 2;
+}
+
+.habilidade-nivel[data-nivel="3"] {
+  --nivel: 3;
+}
+
+
+/* ----- Chamada no fim da seção ----- */
+
+.chamada-conhecimentos {
+  margin: 28px 0 0;
+  font-weight: 600;
+}
+
+.chamada-conhecimentos a {
+  color: var(--cor-link);
+}

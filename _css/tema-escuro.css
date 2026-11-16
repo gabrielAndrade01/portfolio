@@ -1,0 +1,59 @@
+/* ==========================================================================
+   TEMA ESCURO
+   O tema escuro é o padrão.
+   A maior parte da troca de cores é feita redefinindo as variáveis
+   declaradas em base.css; abaixo ficam só os ajustes que variáveis não
+   resolvem.
+   ========================================================================== */
+
+body.escuro {
+  --cor-fundo: #0B1F1E;
+  --cor-texto: #E5E7EB;
+  --cor-texto-suave: #CBD5E1;
+  --cor-borda: #115E59;
+  --cor-suave: #0F2E2C;
+  --cor-superficie: #12302E;
+
+  --cor-titulo: #5EEAD4;
+  --cor-link: #5EEAD4;
+  --cor-destaque-fundo: var(--cor-escura);
+  --cor-erro: #FCA5A5;
+  --cor-erro-fundo: #3B1212;
+  --cor-sucesso-fundo: #0F3D3A;
+  --cor-sucesso-borda: #5EEAD4;
+}
+
+
+/* ----- Campos de texto ----- */
+
+body.escuro .formulario-contato input,
+body.escuro .formulario-contato textarea {
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+}
+
+
+/* ----- Botões ----- */
+
+body.escuro .botao-enviar {
+  background-color: var(--cor-primaria);
+}
+
+body.escuro .botao-enviar:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+body.escuro .botao-filtro {
+  color: #5EEAD4;
+  border-color: #5EEAD4;
+}
+
+body.escuro .botao-filtro:hover {
+  background-color: var(--cor-escura);
+}
+
+body.escuro .botao-filtro[aria-pressed="true"] {
+  background-color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+  color: white;
+}

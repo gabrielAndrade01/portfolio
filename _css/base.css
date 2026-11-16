@@ -1,0 +1,99 @@
+/* ==========================================================================
+   BASE
+   Variáveis (cores e fontes), reset, tipografia e utilitários globais.
+   ========================================================================== */
+
+:root {
+  /* Cores da marca */
+  --cor-escura: #134E4A;
+  --cor-primaria: #0F766E;
+  --cor-primaria-hover: #115E59;
+  --cor-destaque: #F97316;
+
+  /* Superfícies, bordas e texto */
+  --cor-fundo: #F0FDFA;
+  --cor-superficie: #FFFFFF;
+  --cor-suave: #F0FDFA;
+  --cor-borda: #CCFBF1;
+  --cor-texto: #1F2937;
+  --cor-texto-suave: #4B5563;
+
+  /* Cores que mudam entre os temas */
+  /* Tema Claro */
+  --cor-titulo: var(--cor-escura);
+  --cor-link: var(--cor-primaria-hover);
+  --cor-destaque-fundo: #FFF7ED;
+  --cor-erro: #B91C1C;
+  --cor-erro-fundo: #FEF2F2;
+  --cor-sucesso-fundo: #ECFDF5;
+  --cor-sucesso-borda: var(--cor-primaria);
+
+  --sombra-suave: 0 4px 12px rgba(19, 78, 74, 0.08);
+
+  /* Fontes */
+  --fonte-titulo: 'Poppins', Arial, sans-serif;
+  --fonte-texto: 'Inter', Arial, sans-serif;
+}
+
+
+/* ----- Reset e tipografia ----- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  margin: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+h1, h2, h3,
+.menu a,
+.botao {
+  font-family: var(--fonte-titulo);
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ----- Utilitários ----- */
+
+/* Rolagem suave ao clicar no menu */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Foco visível para navegação por teclado */
+:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 3px;
+}
+
+/* Texto lido só por leitores de tela */
+.so-leitor-de-tela {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

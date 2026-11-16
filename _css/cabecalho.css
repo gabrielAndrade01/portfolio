@@ -1,0 +1,202 @@
+/* ==========================================================================
+   CABEÇALHO
+   Faixa do topo: botão de tema, foto e nome, menu de navegação e a janela
+   da foto ampliada.
+   ========================================================================== */
+
+.cabecalho {
+  position: relative;
+  background: linear-gradient(135deg, var(--cor-escura), var(--cor-primaria));
+  color: white;
+  /* as laterais acompanham a coluna de 1050px do conteúdo */
+  padding: 40px max(20px, calc((100% - 1050px) / 2 + 20px)) 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.cabecalho h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.subtitulo {
+  margin: 6px 0 0 0;
+  font-size: 17px;
+  color: #99F6E4;
+}
+
+
+/* ----- Foto de perfil ao lado do nome ----- */
+
+.perfil-topo {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.foto-perfil {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid white;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+/* Foto versão ampliada */
+.botao-foto {
+  flex-shrink: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  line-height: 0;
+  cursor: zoom-in;
+}
+
+.botao-foto:hover .foto-perfil {
+  transform: scale(1.04);
+}
+
+
+/* ----- Botão de tema ----- */
+.botao-tema {
+  position: absolute;
+  top: 24px;
+  right: max(20px, calc((100% - 1050px) / 2 + 20px));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botao-tema:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.botao-tema svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Tema escuro ligado: mostra o sol. Tema claro: mostra a lua. */
+.botao-tema .icone-sol,
+.botao-tema[aria-pressed="true"] .icone-lua {
+  display: none;
+}
+
+.botao-tema[aria-pressed="true"] .icone-sol {
+  display: block;
+}
+
+
+/* ----- Menu de navegação ----- */
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.menu a:hover {
+  color: var(--cor-destaque);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+
+/* ----- Foto ampliada (janela <dialog>) ----- */
+
+.dialogo-foto {
+  max-width: 92vw;
+  max-height: 92vh;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  overflow: visible;
+}
+
+.dialogo-foto::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.area-foto-ampliada {
+  line-height: 0;
+}
+
+.foto-ampliada {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(92vw, 560px);
+  max-height: 85vh;
+  object-fit: contain;
+  border: 4px solid white;
+  border-radius: 12px;
+}
+
+.fechar-foto {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.65);
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.fechar-foto:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.fechar-foto svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* Trava a rolagem da página enquanto a foto está aberta */
+html:has(.dialogo-foto[open]) {
+  overflow: hidden;
+}
