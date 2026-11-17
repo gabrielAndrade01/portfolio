@@ -14,8 +14,8 @@ const projetos = [
     id: 1,
     titulo: "Portfólio Responsivo",
     categoria: "web",
-    descricao: "Evolução visual completa do site pessoal, utilizando folhas de estilo externas e Flexbox em menus e cards.",
-    tecnologias: ["HTML Semântico", "CSS3", "Flexbox"],
+    descricao: "Evolução visual completa do site pessoal, utilizando folhas de estilo externas, Flexbox e JavaScript.",
+    tecnologias: ["HTML Semântico", "CSS3", "JavaScript", "Flexbox"],
     link: { texto: "Ver layout", url: "#" }
   }
 ];

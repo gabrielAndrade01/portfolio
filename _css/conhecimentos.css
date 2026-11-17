@@ -182,6 +182,46 @@
 }
 
 
+/* ----- Efeito ao passar o mouse (áreas e habilidades) ----- */
+
+.area,
+.habilidade {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Só em telas com mouse */
+@media (hover: hover) {
+  .area:hover,
+  .habilidade:hover {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  }
+}
+
+/* Movimento */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .area,
+  .habilidade {
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .area-icone,
+  .habilidade-icone {
+    transition: transform 0.2s;
+  }
+
+  .area:hover,
+  .habilidade:hover {
+    transform: translateY(-4px);
+  }
+
+  .area:hover .area-icone,
+  .habilidade:hover .habilidade-icone {
+    transform: scale(1.08);
+  }
+}
+
+
 /* ----- Chamada no fim da seção ----- */
 
 .chamada-conhecimentos {
